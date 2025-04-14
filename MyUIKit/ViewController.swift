@@ -9,11 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var MyButton: UIButton!
+    @IBOutlet weak var MyLable: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .green
     }
 
-
+    @IBAction func didMyButtonTapped(_ sender: Any) {
+        print("Hello Rowoon!!!")
+        MyLable.text = "Hello Mango!!!"
+    }
+    
 }
 

@@ -28,11 +28,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Touch"/>
+                                <connections>
+                                    <action selector="didMyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4fh-RP-wRP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
+                    <connections>
+                        <outlet property="MyButton" destination="JZ4-RP-Ac6" id="sKb-oi-Vu2"/>
+                        <outlet property="MyLable" destination="zLT-yt-rwX" id="x62-rN-NVk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
