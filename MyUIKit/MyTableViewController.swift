@@ -17,16 +17,24 @@ class MyTableViewController: UIViewController {
         view.backgroundColor = .brown
         myTableView.backgroundColor = .green
         
-        // 이거 넣어줘야 테이블뷰가 나온다
-        myTableView.delegate = self
+        // MyTableViewController에게 동작을 위임함
+        /*
+         UITableView ────┐
+                         │
+                   (delegate & dataSource 설정 필요)
+                         │
+                  ┌──────▼──────┐
+                  │ numberOfRowsInSection → 몇 줄? (cellData.count)
+                  │ cellForRowAt → 무슨 내용? (cellData[indexPath.row])
+                  └─────────────┘
+         */
+        // 쉽게 설명하면 특정 작업을 다 하면 나한테 보고해라!
         myTableView.dataSource = self
     }
 }
 
 // 위에 바로 작성해도 되지만 아래쪽에 작성하는게 보기가 쉬울 수 있다.
-extension MyTableViewController:
-    UITableViewDelegate,
-    UITableViewDataSource {
+extension MyTableViewController: UITableViewDataSource {
     
     // 섹션에 로우가 몇개 들어가는가
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
