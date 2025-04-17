@@ -577,9 +577,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="44.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="deZ-DY-Fxh" kind="show" identifier="profileSegue" id="Kk5-Us-MaB"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -596,6 +593,7 @@
                     <navigationItem key="navigationItem" id="1u3-G3-NvV"/>
                     <connections>
                         <outlet property="profileTableView" destination="5OG-Z9-aRf" id="2ZL-rF-7kE"/>
+                        <segue destination="deZ-DY-Fxh" kind="show" identifier="showDetail" id="QXT-87-Y0s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJz-Mh-t8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
